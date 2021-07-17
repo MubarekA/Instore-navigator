@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+    <h1>{{ path }}</h1>
+    <h2> {{ steps }} steps.</h2>
+    <table class="tableclass">
+       {% for row in graph %}
+       <tr>
+           {% for column in row %}
+                {% if column == 0 or column == 1 %}
+                    <td class="populated">{{ column }}</td>
+                    {% elif column == 20 %}
+                    <td class="check"> </td>
+                    {% elif column == 10 %}
+                    <td class=path> {{ column }}</td> 
+                {% endif %}
+            {% endfor %}
+       {% endfor %}
+       </tr>
+    </table>
+
+</body>
+</html>
