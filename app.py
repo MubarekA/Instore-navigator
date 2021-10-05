@@ -30,7 +30,7 @@ graph = CheckpointGenerator()
 graph = graph.generate_checkpoints(Listfromfrontend)
 @app.route('/')
 def instore_nav():
-    return render_template("myboard.html",graph=graph[1],path=graph[0].split(' '),steps=graph[2])
+    return render_template("myboard.html",graph=graph[1],path=graph[0].split(' ')[1:],steps=graph[2])
 
 if __name__ == '__main__':
     app.run(debug=True)
