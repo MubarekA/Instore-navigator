@@ -8,8 +8,36 @@ and categories of items from a general store, generates an optimal path based on
 - [x] Stores the distance between all items and generates the shortest path between the items using a general algorithm.
 - [x] Overlays the optimal path to all items on a general store map. 
 
-## Picture
-Here's a final: 
+## Picture 
+Given a JSON that contains a list of items and their catergories like this:
+
+```
+[
+    {
+        'name':'showerhead',
+        'category':'bath'
+    },
+        {
+        'name':'oil',
+        'category':'automotive'
+    },
+    {
+    'name':'easter egg',
+    'category':'seasonal'}
+    ,
+    {'name':'phone',
+    'category':'tech'},
+    {
+        'name':'showerhead',
+        'category':'personal_care'
+    },
+      {
+     'name':'barbie',
+     'category':'toys'
+    }
+    ]
+``` 
+The application will generate a path like this: 
 
 <img src='nav_pic.png' title='Map picture' width='' alt='Map picture' />
 
